@@ -1,16 +1,36 @@
-import Swiper from " https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+window.onload=setInterval(plus(), 5000);
 
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  slidesPerView: 'auto',
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true
-  },
-  centeredSlides: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+function plus(){
+   var aci= document.getElementById('aci');
+   if(aci.scrollLeft>1280){
+    aci.scrollLeft=0;   
+   }
+   aci.scrollLeft=aci.scrollLeft+document.getElementById('pratik').clientWidth;
+   
+ 
+}
+function minus(){
+   
+   if(aci.scrollLeft<320){
+    plus();
+   }
+   aci.scrollLeft=aci.scrollLeft - document.getElementById('pratik').clientWidth;
+ }
+//
+ function plus1(){
+    var aci= document.getElementById('r1');
+    if(aci.scrollLeft>1280){
+     aci.scrollLeft=0;   
+    }
+    aci.scrollLeft=aci.scrollLeft+document.getElementById('r2').clientWidth;
+    
+  
+ }
+ function minus1(){
+    
+    if(aci.scrollLeft<320){
+     plus();
+    }
+    aci.scrollLeft=aci.scrollLeft - document.getElementById('pratik').clientWidth;
   }
-});
-
+ 
